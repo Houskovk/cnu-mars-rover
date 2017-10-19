@@ -15,11 +15,11 @@ public class Rover {
         return direction;
     }
 
-    public Rover turnLeft() {
+    public Rover turnLeft(Direction direction) {
         return new Rover(direction.getLeftOf());
     }
 
-    public Rover turnRight() {
+    public Rover turnRight(Direction direction) {
         return new Rover(direction.getRightOf());
     }
 }

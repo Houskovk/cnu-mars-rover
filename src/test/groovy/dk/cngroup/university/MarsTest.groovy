@@ -22,7 +22,7 @@ class MarsTest extends Specification {
 
         when:
         def newPosition = mars
-                .moveForward()
+                .moveForward(rover)
 
         then:
         x == newPosition
@@ -56,7 +56,7 @@ class MarsTest extends Specification {
 
         when:
         def newPosition = mars
-                .moveForward()
+                .moveForward(rover)
 
         then:
         x == newPosition

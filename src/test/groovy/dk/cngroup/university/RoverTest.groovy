@@ -38,7 +38,7 @@ class RoverTest extends Specification {
 
         expect:
         newDirection == rover
-                .turnLeft()
+                .turnLeft(oldDirection)
                 .getDirection()
 
         where:
@@ -56,7 +56,7 @@ class RoverTest extends Specification {
 
         expect:
         newDirection == rover
-                .turnRight()
+                .turnRight(oldDirection)
                 .getDirection()
 
         where:

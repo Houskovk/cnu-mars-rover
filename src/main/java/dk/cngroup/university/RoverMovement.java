@@ -6,20 +6,25 @@ public class RoverMovement {
     char command;
     Direction direction;
     Rover rover = new Rover(direction);
+    RoverPosition position;
+    Landscape landscape;
+    Mars mars = new Mars(rover, landscape, position);
 
-    public RoverMovement(Direction direction, char[] commandSequence) {
+    public RoverMovement(Direction direction, RoverPosition position, Landscape landscape, char[] commandSequence) {
         this.direction = direction;
+        this.position = position;
+        this.landscape = landscape;
         this.commandSequence = commandSequence;
     }
 
 
-    public Rover executeCommandSequence(char commandSequence[]) {
+    public RoverPosition executeCommandSequence(char commandSequence[]) {
 
         for(int i = 0; i < commandSequence.length; i++) {
             command = commandSequence[i];
             executeCommand(commandSequence);
         }
-        return rover;
+        return position;
 
     }
 
@@ -30,12 +35,18 @@ public class RoverMovement {
 
         switch(command) {
             case 'R':
-                direction = direction.getRightOf();
-                rover = new Rover(direction);
+                rover = rover.turnRight(direction);
+                direction = rover.getDirection();
+                mars = new Mars(rover, landscape, position);
                 break;
             case 'L':
-                direction = direction.getLeftOf();
-                rover = new Rover(direction);
+                rover = rover.turnLeft(direction);
+                direction = rover.getDirection();
+                mars = new Mars(rover, landscape, position);
+                break;
+            case 'F':
+                position = mars.moveForward(rover);
+                mars = new Mars(rover, landscape, position);
                 break;
             default:
                 System.out.println("Unknown command!");
