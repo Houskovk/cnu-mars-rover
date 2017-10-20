@@ -1,0 +1,49 @@
+New image:
+       
+  XXx  
+ xXxXX 
+ xxxXX 
+ xxXXX 
+
+Object coordinates: 
+
+
+New image:
+       
+  XXx  
+ xXxXX 
+ xxxXX 
+ xxXXX 
+
+Object coordinates: 
+
+
+New image:
+           
+  xxXXXXX  
+ xxXXXxxXx 
+ xXXXxxxXX 
+  XXXxXxx  
+
+Object coordinates: 
+
+
+New image:
+       
+  XXx  
+ xXxXX 
+ xxxXX 
+ xxXXX 
+
+Object coordinates: 
+
+
+New image:
+       
+  xxXXXXXXxx  
+ xxxXXXXXXxxX 
+  XXXXxxxxXX  
+
+Object coordinates: 
+
+
