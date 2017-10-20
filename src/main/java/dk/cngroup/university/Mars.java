@@ -23,6 +23,8 @@ public class Mars {
         if (landscape.isFieldAccessible(forwardPosition)) {
             return forwardPosition;
         } else {
+            ObjectsToFile printImage = new ObjectsToFile();
+            printImage.writeFile();
             return position;
         }
     }
