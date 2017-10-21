@@ -1,14 +1,47 @@
 package dk.cngroup.university;
 
+import java.io.File;
+
 import static dk.cngroup.university.Direction.*;
 
 public class InputCommands {
 
-    static RoverPosition initialPosition = new RoverPosition(0,1);
-    static Direction initialDirection = NORTH;
-    static int landscapeSize = 5;
-    static RoverPosition destination = new RoverPosition(3,4);
+    static RoverPosition initialPosition;
+    static Direction initialDirection;
+    static int landscapeSize;
+    static RoverPosition destination;
     static char[] roverActions = {'R', 'R', 'F', 'R', 'F', 'L', 'F', 'F',
             'L', 'F', 'F', 'R', 'F', 'L', 'F', 'F', 'L', 'F'};
+    static File myFile = new File("InputCommands.txt");
 
+
+    public void compileInput() {
+
+        InputFileReader input = new InputFileReader();
+        input.readInputFile(myFile);
+        String[] inputCommands = input.getInputCommands();
+
+        String inputDirection = inputCommands[2];
+        initialDirection = Direction.valueOf(inputDirection);
+        landscapeSize = Integer.parseInt(inputCommands[3]);
+        initialPosition = new RoverPosition(Integer.parseInt(inputCommands[0]), Integer.parseInt(inputCommands[1]));
+        destination = new RoverPosition(Integer.parseInt(inputCommands[4]),Integer.parseInt(inputCommands[5]));
+
+    }
+
+    public RoverPosition getInitialPosition() {
+        return initialPosition;
+    }
+
+    public RoverPosition getDestination() {
+        return destination;
+    }
+
+    public int getLandscapeSize() {
+        return landscapeSize;
+    }
+
+    public Direction getInitialDirection() {
+        return initialDirection;
+    }
 }

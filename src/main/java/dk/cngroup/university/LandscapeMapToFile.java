@@ -9,14 +9,14 @@ public class LandscapeMapToFile {
 
         try {
             FileWriter output = new FileWriter(file, true);
-            output.write("New map image:\n" + mapImage + "\n\n\n");
+            output.write("New map image:\n" + mapImage + "\n\n");
             output.close();
 
         } catch (IOException e) {
             System.out.println("ERROR: " + e);
         }
 
-        System.out.println("Landscape map saved to file: " + file);
+        System.out.println("Landscape map saved to file: " + file + "\n");
 
     }
 }

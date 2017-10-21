@@ -23,6 +23,7 @@ public class Mars {
         if (landscape.isFieldAccessible(forwardPosition)) {
             return forwardPosition;
         } else {
+            System.out.println("Detected obstacle at coordinates: " + forwardPosition.getX() + ", " + forwardPosition.getY());
             ObjectsToFile printImage = new ObjectsToFile();
             printImage.writeFile();
             return position;

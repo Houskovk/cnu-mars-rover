@@ -10,7 +10,7 @@ public class ObjectsToFile {
 
         try{
             FileWriter output = new FileWriter(file, true);
-            output.write("New image:\n" + stone + "\nObject coordinates: \n\n\n");
+            output.write("New image:\n" + stone + "\n\n\n");
             output.close();
 
         }catch(IOException e) {
