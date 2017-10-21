@@ -5,4 +5,3 @@ New map image:
 .....
 ..0..
 
-
