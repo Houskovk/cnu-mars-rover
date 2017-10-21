@@ -16,7 +16,7 @@ class InputFileReaderTest extends Specification {
         def readInput = testInput.toString()
 
         then:
-        readInput == "[0, 1, NORTH, 5, 3, 4]"
+        readInput == "[0, 1, NORTH, 5, 3, 4, RRFRFLFFLFFRFLFFLF]"
 
 
     }

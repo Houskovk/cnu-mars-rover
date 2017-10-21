@@ -1,8 +1,10 @@
 package dk.cngroup.university;
 
 public class Simulation {
+    private boolean simulationResult;
 
     public void simulationInterface(){
+
 
         InputCommands input = new InputCommands();
         input.compileInput();
@@ -15,20 +17,20 @@ public class Simulation {
         mapMaker.writeMapFile(map);
 
         RoverMovement movement = new RoverMovement(input.getInitialDirection(), input.getInitialPosition(),
-                                    landscape, InputCommands.roverActions);
-        movement.executeCommandSequence(InputCommands.roverActions);
+                                    landscape, input.getRoverActions());
+        movement.executeCommandSequence(input.getRoverActions());
 
-        if(InputCommands.destination.getX() == movement.position.getX()
-                && InputCommands.destination.getY() == movement.position.getY()){
-            System.out.println("\nTRUE");
-        }else{
-            System.out.println("\nFALSE");
-        }
+        simulationResult = (InputCommands.destination.getX() == movement.position.getX()
+                && InputCommands.destination.getY() == movement.position.getY());
+        System.out.println("\n" + simulationResult);
 
         System.out.println("Reached coordinates: " + movement.position.getX() + ", " + movement.position.getY());
 
 
+    }
 
+    public boolean getSimulationResults(){
+        return simulationResult;
     }
 
 }

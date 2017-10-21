@@ -2,16 +2,14 @@ package dk.cngroup.university;
 
 import java.io.File;
 
-import static dk.cngroup.university.Direction.*;
-
 public class InputCommands {
 
     static RoverPosition initialPosition;
     static Direction initialDirection;
     static int landscapeSize;
     static RoverPosition destination;
-    static char[] roverActions = {'R', 'R', 'F', 'R', 'F', 'L', 'F', 'F',
-            'L', 'F', 'F', 'R', 'F', 'L', 'F', 'F', 'L', 'F'};
+    static char[] roverActions;
+
     static File myFile = new File("InputCommands.txt");
 
 
@@ -26,11 +24,16 @@ public class InputCommands {
         landscapeSize = Integer.parseInt(inputCommands[3]);
         initialPosition = new RoverPosition(Integer.parseInt(inputCommands[0]), Integer.parseInt(inputCommands[1]));
         destination = new RoverPosition(Integer.parseInt(inputCommands[4]),Integer.parseInt(inputCommands[5]));
+        roverActions = inputCommands[6].toCharArray();
 
     }
 
     public RoverPosition getInitialPosition() {
         return initialPosition;
+    }
+
+    public char[] getRoverActions() {
+        return roverActions;
     }
 
     public RoverPosition getDestination() {

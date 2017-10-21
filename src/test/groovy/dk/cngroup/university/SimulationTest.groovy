@@ -3,13 +3,12 @@ package dk.cngroup.university
 import spock.lang.Specification
 import spock.lang.Unroll
 
-import static dk.cngroup.university.Direction.NORTH
 import static dk.cngroup.university.Field.*
 
 class SimulationTest extends Specification {
 
     @Unroll
-    "should print correct output"(){
+    "should reach destination when all fields accessible"(){
 
         given:
         RandomFieldGenerator generator = Mock(RandomFieldGenerator)
@@ -31,8 +30,7 @@ class SimulationTest extends Specification {
         result.getX() == destination.getX()
         result.getY() == destination.getY()
 
-
-
     }
+
 
 }
