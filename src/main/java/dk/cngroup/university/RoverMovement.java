@@ -48,6 +48,10 @@ public class RoverMovement {
                 position = mars.moveForward(rover);
                 mars = new Mars(rover, landscape, position);
                 break;
+            case 'B':
+                position = mars.moveBackwards(rover);
+                mars = new Mars(rover, landscape, position);
+                break;
             default:
                 System.out.println("Unknown command!");
                 break;

@@ -29,4 +29,18 @@ public class Mars {
             return position;
         }
     }
+
+    public RoverPosition moveBackwards(Rover rover) {
+        RoverPosition backwardsPosition = RoverPositionFactory.getBackwardsPosition(position, rover.getDirection());
+
+        if (landscape.isFieldAccessible(backwardsPosition)) {
+            return backwardsPosition;
+        } else {
+            System.out.println("Detected obstacle at coordinates: " + backwardsPosition.getX() + ", " + backwardsPosition.getY());
+            ObjectsToFile printImage = new ObjectsToFile();
+            printImage.writeFile();
+            return position;
+        }
+    }
+
 }
