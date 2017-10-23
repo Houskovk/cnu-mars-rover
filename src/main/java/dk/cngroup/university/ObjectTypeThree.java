@@ -2,7 +2,7 @@ package dk.cngroup.university;
 
 public class ObjectTypeThree extends DetectedObjects {
 
-    static char objectType[][] = {{' ',' ',' ',' ',' ',' ',' '},{' ',' ','X','X','x',' ',' '},
+    private static char objectType[][] = {{' ',' ',' ',' ',' ',' ',' '},{' ',' ','X','X','x',' ',' '},
             {' ','x','X','x','X','X',' '},{' ','x','x','x','X','X',' '},
             {' ','x','x','X','X','X',' '}};
 

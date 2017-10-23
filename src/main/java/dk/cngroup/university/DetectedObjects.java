@@ -2,7 +2,7 @@ package dk.cngroup.university;
 
 public class DetectedObjects {
 
-    static char objectType[][];
+    private static char objectType[][];
 
     public String printPicture() {
 

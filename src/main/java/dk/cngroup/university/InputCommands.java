@@ -6,12 +6,11 @@ public class InputCommands {
 
     static RoverPosition initialPosition;
     static Direction initialDirection;
-    static int landscapeSize;
     static RoverPosition destination;
     static char[] roverActions;
 
-    static File myFile = new File("InputCommands.txt");
-
+    private static File myFile = new File("InputCommands.txt");
+    private static int landscapeSize;
 
     public void compileInput() {
 

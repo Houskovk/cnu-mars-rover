@@ -1,7 +1,6 @@
 package dk.cngroup.university;
 
 public class Simulation {
-    private boolean simulationResult;
 
     public void simulationInterface() {
 
@@ -24,7 +23,7 @@ public class Simulation {
                     landscape, input.getRoverActions());
             movement.executeCommandSequence(input.getRoverActions());
 
-            simulationResult = (InputCommands.destination.getX() == movement.position.getX()
+            boolean simulationResult = (InputCommands.destination.getX() == movement.position.getX()
                     && InputCommands.destination.getY() == movement.position.getY());
             System.out.println("\n" + simulationResult);
 
@@ -34,10 +33,6 @@ public class Simulation {
         } else {
             System.out.println("Initial position or destination not accessible. Aborting simulation.");
         }
-    }
-
-    public boolean getSimulationResults() {
-        return simulationResult;
     }
 
 }

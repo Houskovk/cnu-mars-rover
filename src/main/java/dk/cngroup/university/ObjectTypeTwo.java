@@ -2,7 +2,7 @@ package dk.cngroup.university;
 
 public class ObjectTypeTwo extends DetectedObjects {
 
-    static char objectType[][] = {{' ',' ',' ',' ',' ',' ',' '},{' ',' ','x','x','X','X','X','X','X','X','x','x',' ',' '},
+    private static char objectType[][] = {{' ',' ',' ',' ',' ',' ',' '},{' ',' ','x','x','X','X','X','X','X','X','x','x',' ',' '},
             {' ','x','x','x','X','X','X','X','X','X','x','x','X',' '},
             {' ',' ','X','X','X','X','x','x','x','x','X','X',' ',' '}};
 
